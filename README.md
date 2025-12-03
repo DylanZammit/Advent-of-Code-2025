@@ -18,8 +18,13 @@ r'^(\d+)\1+$
 This regex matches a set of digits, and ensure that this first captured group is repeated at least once until the end of the number.
 For part A, we simply remove the `+`.
 ## Day 3
-### Part A
-### Part B
+Part A is generalised by part B, so we will only explain the latter.
+1. Let `N` be the number of digits to be chosen (`N=2` for part A and `N=12` for part B).
+2. Let `idx = 0` and `M` the number of available digits. Let `s = 0`.
+3. Find the maximum digit from digits `idx` to `M-N`. Denote this digit `d`
+4. Let `s = s * 10 + d` and `N--`.
+5. Let `idx` be the position of the digit to the right of `d` 
+6. Go to step 3 until `s` is `N` digits long.
 ## Day 4
 ### Part A
 ### Part B
