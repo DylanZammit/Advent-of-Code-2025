@@ -1,5 +1,6 @@
 from utils import *
 from aocd import get_data, submit
+import re
 
 year, day = 2025, 2
 
@@ -13,24 +14,9 @@ out = 0
 
 valid = []
 for a, b in dat:
-    na, nb = len(a), len(b)
-    if na == nb and na % 2 == 1:
-        continue
-    if na % 2 == 1:
-        x = int(10 ** na / 10 ** ((na+1) / 2))
-    else:
-        x = int(a[:na//2])
-
-    while True:
-        z = int(str(x) + str(x))
-        if z < int(a):
-            x += 1
-            continue
-        if z > int(b):
-            break
-        assert int(a) <= z <= int(b)
-        valid.append(z)
-        x += 1
+    for c in range(int(a), int(b)+1):
+        if re.search(r'^(\d+)\1$', str(c)):
+            valid.append(c)
 
 out = sum(valid)
 print(out)
