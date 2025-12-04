@@ -27,7 +27,9 @@ Part A is generalised by part B, so we will only explain the latter.
 6. Go to step 3 until `s` is `N` digits long.
 ## Day 4
 ### Part A
+Brute-force: iterate each item, check all 8 adjacent directions, and increment if at most 3 rolls of paper located in these positions.
 ### Part B
+Every time we verify a roll of paper can be removed, replace it with a `.`, and continue the process until new iteration yields no update.
 ## Day 5
 ### Part A
 ### Part B
