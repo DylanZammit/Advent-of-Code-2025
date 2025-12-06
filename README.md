@@ -34,8 +34,7 @@ Every time we verify a roll of paper can be removed, replace it with a `.`, and 
 ### Part A
 ### Part B
 ## Day 6
-### Part A
-### Part B
+After parsing and transposing accordingly, simply apply `sum` and `np.prod` for both parts.
 ## Day 7
 ### Part A
 ### Part B
